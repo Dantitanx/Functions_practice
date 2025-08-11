@@ -1,8 +1,8 @@
-const startGameBtn = document.getElementById('start-game-btn');
+const startGameBtn = document.getElementById("start-game-btn");
 
-const ROCK = 'ROCK';
-const PAPER = 'PAPER';
-const SCISSORS = 'SCISSORS';
+const ROCK = "ROCK";
+const PAPER = "PAPER";
+const SCISSORS = "SCISSORS";
 const DEFAULT_USER_CHOICE = ROCK;
 const RESULT_DRAW = 'DRAW';
 const RESULT_PLAYER_WINS = 'PLAYER_WINS';
@@ -12,9 +12,7 @@ let gameIsRunning = false;
 
 const getPlayerChoice = () => {
   const selection = prompt(
-    `${ROCK}, ${PAPER} or ${SCISSORS}?`,
-    ''
-  ).toUpperCase();
+    `${ROCK}, ${PAPER} or ${SCISSORS}?`, "").toUpperCase();
   if (selection !== ROCK && selection !== PAPER && selection !== SCISSORS) {
     alert(`Invalid choice! We chose ${DEFAULT_USER_CHOICE} for you.`);
     return;
@@ -22,7 +20,11 @@ const getPlayerChoice = () => {
   return selection;
 };
 
+<<<<<<< HEAD
 const getComputerChoice = () => {
+=======
+const getComputerChoice = function () {
+>>>>>>> 4cb91b236c9f5b348b7acfd629f39559f4963e32
   const randomValue = Math.random();
   if (randomValue < 0.34) {
     return ROCK;
@@ -33,6 +35,7 @@ const getComputerChoice = () => {
   }
 };
 
+<<<<<<< HEAD
 const getWinner = (cChoice, pChoice = DEFAULT_USER_CHOICE) => {
   if (cChoice === pChoice) {
     return RESULT_DRAW;
@@ -48,10 +51,15 @@ const getWinner = (cChoice, pChoice = DEFAULT_USER_CHOICE) => {
 };
 
 startGameBtn.addEventListener('click', () => {
+=======
+
+startGameBtn.addEventListener("click", function () {
+>>>>>>> 4cb91b236c9f5b348b7acfd629f39559f4963e32
   if (gameIsRunning) {
     return;
   }
   gameIsRunning = true;
+<<<<<<< HEAD
   console.log('Game is starting...');
   const playerChoice = getPlayerChoice(); //! Might be undefined
   const computerChoice = getComputerChoice();
@@ -70,4 +78,11 @@ startGameBtn.addEventListener('click', () => {
   alert(message);
   console.log("The game has ended.")
   gameIsRunning = false;
+=======
+  console.log("Game is starting...");
+  const playerSelection = getPlayerChoice();
+  const computerSelection = getComputerChoice();
+  console.log(`Player's choice: ${playerSelection}`);
+  console.log(playerSelection);
+>>>>>>> 4cb91b236c9f5b348b7acfd629f39559f4963e32
 });
