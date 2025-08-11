@@ -23,7 +23,6 @@ startGameBtn.addEventListener('click', function () {
   if (gameIsRunning) {
     return;
   }
-
   gameIsRunning = true;
   console.log('Game is starting...');
   const playerSelection = getPlayerChoice();
